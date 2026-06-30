@@ -1,0 +1,94 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Scotland Escape — App Planner</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="manifest" href="manifest.json" />
+</head>
+<body>
+<header class="hero" style="min-height:60vh">
+  <nav><strong>Scotland Escape</strong><span>App planner</span></nav>
+  <div class="hero-inner">
+    <p class="eyebrow">Trip mode • Walks • Spa • Prices • Golf • Restaurants</p>
+    <h1 style="font-size:clamp(3rem,8vw,7rem)">Travel App</h1>
+    <p class="subtitle">An app-style planning hub for choosing, booking and using the trip on your phone.</p>
+    <div class="hero-actions"><a class="button" href="index.html">Maps</a><a class="button ghost" href="planning.html">Planning detail</a></div>
+  </div>
+</header>
+<main>
+<section class="section">
+  <p class="eyebrow">Trip mode</p><h2>What you see on the day</h2>
+  <div class="feature-grid">
+    <article><h3>Today</h3><p>Hotel, drive leg, tee time, spa booking, dinner target and the best Guinness walk for that stop.</p></article>
+    <article><h3>One-tap links</h3><p>Quick buttons for hotel booking pages, golf clubs, ferry, Google Maps and spa reservations.</p></article>
+    <article><h3>Booking tracker</h3><p>Mark tee times, hotel dog rooms, ferry, spa and dinner bookings as confirmed.</p></article>
+    <article><h3>Print mode</h3><p>The pages are designed to print cleanly if you want a backup itinerary.</p></article>
+  </div>
+</section>
+<section class="section">
+  <p class="eyebrow">Budget</p><h2>Budget / mid / luxury toggles</h2>
+  <div class="price-cards">
+    <article><span>Budget</span><strong>Use Ducks Inn + Hotel du Vin</strong><p>Lower accommodation spend, still strong East Coast golf and food.</p></article>
+    <article><span>Mid</span><strong>Rufflets / Marine balance</strong><p>Best comfort-to-cost balance with spa and dog-friendly walks.</p></article>
+    <article><span>Luxury</span><strong>Fairmont / Torridon / Rusacks</strong><p>Maximum comfort, spa, destination-hotel feel and easiest downtime.</p></article>
+  </div>
+</section>
+<section class="section" id="walks">
+  <p class="eyebrow">Walks section</p><h2>Best Guinness-friendly walks</h2>
+  <div class="cards">
+    <article><h3>Machrihanish Beach</h3><p>Big Atlantic beach, ideal after golf. Best on Route 1.</p></article>
+    <article><h3>Dornoch Beach</h3><p>Long, easy, sandy walk after Royal Dornoch. Best on Route 2.</p></article>
+    <article><h3>West Sands</h3><p>Classic St Andrews beach walk with wide open space. Best on Route 3.</p></article>
+    <article><h3>Gullane Bents</h3><p>East Lothian beach and dunes, good for a relaxed dog walk.</p></article>
+    <article><h3>Yellowcraig</h3><p>Woodland and beach combination with views to Fidra.</p></article>
+  </div>
+</section>
+<section class="section">
+  <p class="eyebrow">Spa planner</p><h2>Best spa choices</h2>
+  <table><tr><th>Spa</th><th>Best for</th><th>Planning note</th></tr><tr><td>Loch Fyne</td><td>First-night reset</td><td>Pool, thermal time and treatments before the long west drive.</td></tr><tr><td>Marine North Berwick</td><td>Best East Coast wellness</td><td>Ideal if Emma wants spa time during North Berwick golf.</td></tr><tr><td>Fairmont St Andrews</td><td>Resort spa</td><td>Best if pool, treatments and resort comfort matter most.</td></tr><tr><td>The Machrie</td><td>Relaxed island recovery</td><td>Treatment and slow-time option rather than a huge destination spa.</td></tr></table>
+</section>
+<section class="section">
+  <p class="eyebrow">Booking tracker</p><h2>Tick-off list</h2>
+  <div class="check-grid">
+    <label><input type="checkbox"> Royal Dornoch tee time</label><label><input type="checkbox"> North Berwick tee time</label><label><input type="checkbox"> St Andrews ballot / backup</label><label><input type="checkbox"> Dog-friendly rooms confirmed</label><label><input type="checkbox"> Islay ferry car space</label><label><input type="checkbox"> Spa treatments</label><label><input type="checkbox"> Dinner bookings</label><label><input type="checkbox"> Guinness packing kit</label>
+  </div>
+</section>
+<section class="section">
+  <p class="eyebrow">Packing</p><h2>Trip checklist</h2>
+  <div class="feature-grid"><article><h3>Golf</h3><p>Waterproofs, shoes, gloves, balls, rangefinder, layers and smart clubhouse clothes.</p></article><article><h3>Spa</h3><p>Swimwear, flip-flops, treatment times and dinner clothes.</p></article><article><h3>Guinness</h3><p>Lead, towel, bowls, food, treats, poo bags, bed, drying robe and vet details.</p></article><article><h3>Road trip</h3><p>Chargers, ferry booking, hotel confirmations, printed backup and snacks.</p></article></div>
+</section>
+<section class="section" id="calculator">
+  <p class="eyebrow">Cost calculator</p><h2>Interactive budget estimate</h2>
+  <div class="calculator-card">
+    <label>Accommodation estimate <input id="accom" type="range" min="1000" max="2500" value="1500" step="50"><b id="accomOut">£1500</b></label>
+    <label>Golf estimate <input id="golf" type="range" min="300" max="1200" value="850" step="25"><b id="golfOut">£850</b></label>
+    <label>Food/fuel/ferry <input id="extras" type="range" min="300" max="1000" value="600" step="25"><b id="extrasOut">£600</b></label>
+    <h3>Total: <span id="totalOut">£2950</span></h3>
+  </div>
+</section>
+<section class="section" id="weather">
+  <p class="eyebrow">Live travel layer</p><h2>Weather, ferry and traffic</h2>
+  <div class="feature-grid">
+    <article><h3>Weather</h3><p>Use this as the live-weather panel once travel week is close. For now it keeps the trip checklist focused on what to verify: wind, rain, temperature and sunset.</p></article>
+    <article><h3>Ferry status</h3><p>Route 1 should always check CalMac service status before leaving Machrihanish/Kennacraig.</p></article>
+    <article><h3>Traffic</h3><p>Open each route in Google Maps on the day for live traffic and roadworks.</p></article>
+    <article><h3>Offline backup</h3><p>The app has a simple service-worker cache so core pages can reopen after first visit.</p></article>
+  </div>
+</section>
+<section class="section" id="scorecards">
+  <p class="eyebrow">Golf companion</p><h2>Golf extras to add as bookings firm up</h2>
+  <div class="cards">
+    <article><h3>Score tracker</h3><p>Add tee times, score targets, course notes and post-round food picks.</p></article>
+    <article><h3>Course logistics</h3><p>Practice facilities, arrival time, dress code, buggy/caddie notes and clubhouse food.</p></article>
+    <article><h3>Backup rounds</h3><p>New/Jubilee for St Andrews, Struie for Dornoch, local East Lothian alternatives.</p></article>
+  </div>
+</section>
+<script>
+function bindBudget(){const ids=['accom','golf','extras'];function upd(){let t=0;ids.forEach(id=>{const el=document.getElementById(id),out=document.getElementById(id+'Out');if(el){t+=+el.value;out.textContent='£'+(+el.value).toLocaleString();}});const total=document.getElementById('totalOut');if(total)total.textContent='£'+t.toLocaleString();}ids.forEach(id=>document.getElementById(id)?.addEventListener('input',upd));upd();}bindBudget();
+if('serviceWorker' in navigator){navigator.serviceWorker.register('./sw.js').catch(()=>{});}
+</script>
+</main>
+<footer><p>Scotland Escape app planner</p></footer>
+</body></html>
