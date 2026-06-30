@@ -16,52 +16,45 @@
     <div class="hero-inner">
       <p class="eyebrow">Golf • Spa • Food • Scenic drives • Walks • Guinness-friendly</p>
       <h1>Scotland Escape</h1>
-      <p class="subtitle">A travel planner for David, Emma and Guinness, with routed maps, spa planning, costs, walks and booking tools.</p>
+      <p class="subtitle">Pick a route, view it individually, and get a clear day-by-day breakdown.</p>
       <div class="hero-actions">
-        <a href="#routes" class="button">Explore routes</a>
-        <a href="features.html" class="button ghost">Open app planner</a>
-        <a href="planning.html" class="button ghost">Planning detail</a>
+        <a href="#choose" class="button">Choose a route</a>
+        <a href="features.html" class="button ghost">App planner</a>
+        <a href="planning.html" class="button ghost">All planning detail</a>
       </div>
     </div>
   </header>
 
   <main>
-    <section class="section intro">
-      <div><p class="eyebrow">Choose your escape</p><h2>Three routes, one planner</h2><p>The site now has routed maps, a detailed planning page, an app planner, walks, a budget calculator, spa comparison, booking tracker and offline-ready files.</p></div>
-      <div class="score-grid">
-        <article><strong>Route 1</strong><span>West and Islay</span><b>Island golf, ferry, Machrihanish and The Machrie</b></article>
-        <article><strong>Route 2</strong><span>Highlands</span><b>Glencoe, Torridon and Royal Dornoch</b></article>
-        <article><strong>Route 3</strong><span>East Coast</span><b>North Berwick, spa, St Andrews and easiest driving</b></article>
+    <section class="section" id="choose">
+      <div class="section-head"><p class="eyebrow">Start here</p><h2>View each route individually</h2><p>Each route now has its own page with a dedicated map, day-by-day itinerary, cost estimate, spa notes and walks.</p></div>
+      <div class="feature-grid">
+        <article><h3>Route 1</h3><p><strong>West and Islay</strong><br>Loch Fyne, Machrihanish, Islay ferry and The Machrie.</p><a class="button" href="route-1.html">Open Route 1</a></article>
+        <article><h3>Route 2</h3><p><strong>Highlands and Royal Dornoch</strong><br>Glencoe, Torridon, Dornoch and the biggest scenery.</p><a class="button" href="route-2.html">Open Route 2</a></article>
+        <article><h3>Route 3</h3><p><strong>East Coast and St Andrews</strong><br>North Berwick, spa, beaches, St Andrews and easiest driving.</p><a class="button" href="route-3.html">Open Route 3</a></article>
+        <article><h3>Planner</h3><p><strong>Trip tools</strong><br>Walks, budget sliders, packing, booking tracker and app-style tools.</p><a class="button" href="features.html">Open Planner</a></article>
       </div>
     </section>
 
     <section class="section map-section">
-      <div class="section-head"><p class="eyebrow">Interactive routed map</p><h2>All three Scotland Escape routes</h2><p>The map attempts road routing using a free routing service, then falls back to dashed lines if routing is unavailable. Markers include hotels, golf, spa, ferry, scenic stops and walks.</p></div>
+      <div class="section-head"><p class="eyebrow">Overview map</p><h2>All routes at a glance</h2><p>Use this map for the big picture, then open the individual route pages for the day-by-day breakdown.</p></div>
       <div id="overview-map" class="map"></div>
     </section>
 
-    <section class="section" id="routes">
-      <div class="section-head"><p class="eyebrow">Route plans</p><h2>Detailed route maps</h2></div>
-      <article class="route-card"><div class="route-title"><span>Route 1</span><h3>West and Islay</h3><p>Giffnock, Rest and Be Thankful, Inveraray, Tarbert, Machrihanish, Kennacraig ferry, Islay and The Machrie.</p></div><div id="route1-map" class="map small"></div></article>
-      <article class="route-card"><div class="route-title"><span>Route 2</span><h3>Highlands and Royal Dornoch</h3><p>Giffnock, Glencoe, Torridon, Dornoch and home.</p></div><div id="route2-map" class="map small"></div></article>
-      <article class="route-card"><div class="route-title"><span>Route 3</span><h3>East Coast and St Andrews</h3><p>Giffnock, North Berwick, Aberlady, Gullane, St Andrews and home.</p></div><div id="route3-map" class="map small"></div></article>
-    </section>
-
-    <section class="section spa" id="spa">
-      <div class="section-head"><p class="eyebrow">Spa and walks</p><h2>Best relaxing options</h2></div>
-      <div class="spa-grid">
-        <article><h3>Loch Fyne</h3><p>Best Route 1 arrival-day spa reset before the west coast driving starts.</p><p class="tag">Spa</p></article>
-        <article><h3>Marine North Berwick</h3><p>Best East Coast spa base and ideal while golf is happening.</p><p class="tag">Spa</p></article>
-        <article><h3>Fairmont St Andrews</h3><p>Best resort-style spa fallback around St Andrews.</p><p class="tag">Spa</p></article>
-        <article><h3>Walks hub</h3><p>Machrihanish Beach, Dornoch Beach, Gullane, Yellowcraig and West Sands are now in the app planner.</p><p class="tag">Walks</p></article>
+    <section class="section intro">
+      <div><p class="eyebrow">Quick comparison</p><h2>Which one suits best?</h2><p>Route 1 is the adventure, Route 2 is the scenery, Route 3 is the easiest and strongest spa route.</p></div>
+      <div class="score-grid">
+        <article><strong>Route 1</strong><span>West and Islay</span><b>Best island escape</b></article>
+        <article><strong>Route 2</strong><span>Highlands</span><b>Best scenery and Royal Dornoch</b></article>
+        <article><strong>Route 3</strong><span>East Coast</span><b>Best spa, walks and easy logistics</b></article>
       </div>
     </section>
 
     <section class="section booking">
-      <div><p class="eyebrow">Next pages</p><h2>Use the app planner</h2></div>
+      <div><p class="eyebrow">More detail</p><h2>Other pages</h2></div>
       <ol>
-        <li><a href="features.html">Open the app planner</a> for walks, budget sliders, packing and booking tracker.</li>
-        <li><a href="planning.html">Open planning detail</a> for price tables, spa notes and day-by-day itineraries.</li>
+        <li><a href="planning.html">Planning detail</a>: price tables, spa notes and all day-by-day itineraries.</li>
+        <li><a href="features.html">App planner</a>: walks, budget sliders, packing and booking tracker.</li>
       </ol>
     </section>
   </main>
