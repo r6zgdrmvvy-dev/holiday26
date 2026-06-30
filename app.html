@@ -1,0 +1,108 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Scotland Escape App</title>
+  <link rel="manifest" href="manifest.json" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body class="app-shell">
+  <main class="app-main">
+    <section class="app-hero-card">
+      <p class="eyebrow">Scotland Escape</p>
+      <h1>Good morning, David & Emma</h1>
+      <p>31 Aug to 5 Sep 2026 • Golf, spa, walks and Guinness-friendly travel planning.</p>
+      <div class="app-stat-row">
+        <span><strong id="countdownDays">—</strong><small>days to go</small></span>
+        <span><strong>3</strong><small>route options</small></span>
+        <span><strong>5</strong><small>nights</small></span>
+      </div>
+    </section>
+
+    <section id="home" class="app-panel active">
+      <div class="app-section-head"><h2>Choose your route</h2><a href="index.html">Classic site</a></div>
+      <div class="app-route-grid">
+        <article class="app-route-card west"><b>Route 1</b><h3>West & Islay</h3><p>Loch Fyne, Machrihanish, ferry to Islay and The Machrie.</p><div class="mini-score">Golf ★★★★★ • Spa ★★★★☆ • Driving ★★★☆☆</div><a href="route-1.html">Open route</a></article>
+        <article class="app-route-card highlands"><b>Route 2</b><h3>Highlands</h3><p>Glencoe, Torridon, Dornoch and Royal Dornoch.</p><div class="mini-score">Golf ★★★★★ • Scenery ★★★★★ • Driving ★★☆☆☆</div><a href="route-2.html">Open route</a></article>
+        <article class="app-route-card east"><b>Route 3</b><h3>East Coast</h3><p>North Berwick, spa, beaches, St Andrews and easiest driving.</p><div class="mini-score">Golf ★★★★★ • Spa ★★★★★ • Driving ★★★★★</div><a href="route-3.html">Open route</a></article>
+      </div>
+
+      <div class="app-section-head"><h2>Today mode preview</h2></div>
+      <div class="today-card">
+        <div><span class="pill">Trip mode</span><h3>When the trip starts, this becomes the daily command centre.</h3><p>Hotel, drive, tee time, spa booking, dinner, walk and one-tap navigation all in one place.</p></div>
+        <ul><li>Morning drive summary</li><li>Best Guinness walk</li><li>Golf/spa split plan</li><li>Booking confirmations</li></ul>
+      </div>
+    </section>
+
+    <section id="compare" class="app-panel">
+      <div class="app-section-head"><h2>Compare routes</h2></div>
+      <div class="comparison-bars">
+        <article><h3>Route 1 — West & Islay</h3><p>Best adventure and island feel.</p><meter min="0" max="100" value="86"></meter><span>Escape score 86</span></article>
+        <article><h3>Route 2 — Highlands</h3><p>Best scenery and Royal Dornoch.</p><meter min="0" max="100" value="82"></meter><span>Escape score 82</span></article>
+        <article><h3>Route 3 — East Coast</h3><p>Best spa, walks and easy logistics.</p><meter min="0" max="100" value="91"></meter><span>Escape score 91</span></article>
+      </div>
+      <div class="app-section-head"><h2>David & Emma mode</h2><p>Move the priorities and the recommendation updates instantly.</p></div>
+      <div class="sliders-card">
+        <label>Golf <input data-priority="golf" type="range" min="1" max="10" value="9"></label>
+        <label>Spa <input data-priority="spa" type="range" min="1" max="10" value="8"></label>
+        <label>Scenery <input data-priority="scenery" type="range" min="1" max="10" value="8"></label>
+        <label>Easy driving <input data-priority="driving" type="range" min="1" max="10" value="6"></label>
+        <label>Dog walks <input data-priority="dog" type="range" min="1" max="10" value="9"></label>
+        <div class="recommendation" id="routeRecommendation">Recommended: Route 3 — East Coast</div>
+      </div>
+    </section>
+
+    <section id="planner" class="app-panel">
+      <div class="app-section-head"><h2>Booking progress</h2></div>
+      <div class="progress-list">
+        <label><span>Hotels</span><progress value="20" max="100"></progress><input type="checkbox"> Confirm dog rooms</label>
+        <label><span>Golf</span><progress value="10" max="100"></progress><input type="checkbox"> Book tee times</label>
+        <label><span>Spa</span><progress value="0" max="100"></progress><input type="checkbox"> Pick treatments</label>
+        <label><span>Restaurants</span><progress value="0" max="100"></progress><input type="checkbox"> Book dinners</label>
+        <label><span>Ferry</span><progress value="0" max="100"></progress><input type="checkbox"> Route 1 only</label>
+      </div>
+      <div class="app-section-head"><h2>Before-you-leave checklist</h2></div>
+      <div class="timeline-list">
+        <article><b>60 days</b><span>Book hotels, dog rooms and priority golf.</span></article>
+        <article><b>30 days</b><span>Confirm dinner and spa bookings.</span></article>
+        <article><b>14 days</b><span>Check ferry, dog policies and weather trend.</span></article>
+        <article><b>7 days</b><span>Pack golf, spa, road trip and Guinness kit.</span></article>
+        <article><b>1 day</b><span>Download maps and save confirmations offline.</span></article>
+      </div>
+    </section>
+
+    <section id="budget" class="app-panel">
+      <div class="app-section-head"><h2>Budget planner</h2></div>
+      <div class="budget-app-card">
+        <label>Accommodation <input class="budget-range" id="bAccom" type="range" min="1000" max="2600" value="1600" step="50"><b>£<span>1600</span></b></label>
+        <label>Golf <input class="budget-range" id="bGolf" type="range" min="300" max="1200" value="850" step="25"><b>£<span>850</span></b></label>
+        <label>Food <input class="budget-range" id="bFood" type="range" min="250" max="900" value="500" step="25"><b>£<span>500</span></b></label>
+        <label>Spa <input class="budget-range" id="bSpa" type="range" min="0" max="500" value="180" step="10"><b>£<span>180</span></b></label>
+        <label>Fuel/ferry <input class="budget-range" id="bTravel" type="range" min="150" max="600" value="300" step="25"><b>£<span>300</span></b></label>
+        <div class="budget-total">Estimated total <strong id="budgetTotal">£3,430</strong></div>
+      </div>
+    </section>
+
+    <section id="more" class="app-panel">
+      <div class="app-section-head"><h2>Planning library</h2></div>
+      <div class="link-library">
+        <a href="planning.html">All planning detail</a>
+        <a href="features.html">Walks, packing and tools</a>
+        <a href="route-1.html">Route 1 day-by-day</a>
+        <a href="route-2.html">Route 2 day-by-day</a>
+        <a href="route-3.html">Route 3 day-by-day</a>
+      </div>
+    </section>
+  </main>
+
+  <nav class="bottom-nav">
+    <button data-tab="home" class="active">🏠<span>Home</span></button>
+    <button data-tab="compare">🧭<span>Compare</span></button>
+    <button data-tab="planner">✅<span>Plan</span></button>
+    <button data-tab="budget">💰<span>Budget</span></button>
+    <button data-tab="more">⋯<span>More</span></button>
+  </nav>
+  <script src="app.js"></script>
+</body>
+</html>
