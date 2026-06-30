@@ -1,0 +1,244 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Scotland Escape 2026</title>
+  <meta name="description" content="Scotland Escape — golf, spa, food and dog-friendly routes for 31 Aug–5 Sep 2026." />
+  <link rel="preconnect" href="https://unpkg.com">
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="hero">
+    <nav>
+      <strong>Scotland Escape</strong>
+      <span>31 Aug – 5 Sep 2026</span>
+    </nav>
+    <div class="hero-inner">
+      <p class="eyebrow">Golf • Spa • Great Food • Scenic Drives • Guinness-friendly</p>
+      <h1>Scotland Escape</h1>
+      <p class="subtitle">Three luxury route options for David, Emma & Guinness.</p>
+      <div class="hero-actions">
+        <a href="#routes" class="button">Explore routes</a>
+        <a href="#spa" class="button ghost">Spa options</a>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="section intro">
+      <div>
+        <p class="eyebrow">Trip overview</p>
+        <h2>Five nights, three strong options</h2>
+        <p>This guide turns the itinerary into a proper travel-planning site with interactive maps, drive legs, golf notes, spa highlights, dog-friendly ideas and booking priorities.</p>
+      </div>
+      <div class="score-grid">
+        <article><strong>Route 1</strong><span>West & Islay</span><b>Best for island golf + whisky</b></article>
+        <article><strong>Route 2</strong><span>Highlands</span><b>Best for scenery + Royal Dornoch</b></article>
+        <article><strong>Route 3</strong><span>East Coast</span><b>Best for spa + St Andrews</b></article>
+      </div>
+    </section>
+
+    <section class="section map-section">
+      <div class="section-head">
+        <p class="eyebrow">Interactive overview</p>
+        <h2>All three Scotland Escape routes</h2>
+        <p>Use the layer button on the map to toggle each route. Markers show hotels, golf bases, spa stops and ferry points.</p>
+      </div>
+      <div id="overview-map" class="map"></div>
+    </section>
+
+    <section class="section" id="routes">
+      <div class="section-head">
+        <p class="eyebrow">Route plans</p>
+        <h2>Detailed itineraries</h2>
+      </div>
+
+      <article class="route-card route-west">
+        <div class="route-title">
+          <span>Route 1</span>
+          <h3>West & Islay</h3>
+          <p>Loch Fyne • Machrihanish • Kennacraig ferry • The Machrie</p>
+        </div>
+        <div id="route1-map" class="map small"></div>
+        <div class="columns">
+          <div>
+            <h4>Travel legs</h4>
+            <table>
+              <tr><th>Leg</th><th>Approx. drive</th><th>Best stop</th></tr>
+              <tr><td>Giffnock → Inveraray</td><td>1 hr 30–1 hr 45</td><td>Rest and Be Thankful</td></tr>
+              <tr><td>Inveraray → Machrihanish</td><td>2 hr 15–2 hr 35</td><td>Tarbert Harbour</td></tr>
+              <tr><td>Machrihanish → Kennacraig</td><td>1 hr 10–1 hr 25</td><td>Campbeltown coffee stop</td></tr>
+              <tr><td>Kennacraig → Port Askaig</td><td>~2 hr ferry</td><td>Book CalMac car space early</td></tr>
+              <tr><td>Port Askaig → The Machrie</td><td>30–40 mins</td><td>Bowmore / Bridgend</td></tr>
+            </table>
+          </div>
+          <div>
+            <h4>Why choose it</h4>
+            <ul>
+              <li>Most adventurous route with the strongest “escape” feel.</li>
+              <li>Machrihanish plus The Machrie gives proper destination golf.</li>
+              <li>Excellent whisky and seafood potential on Islay.</li>
+              <li>Good dog walks: Machrihanish Beach and Islay beaches.</li>
+            </ul>
+          </div>
+        </div>
+      </article>
+
+      <article class="route-card route-highlands">
+        <div class="route-title">
+          <span>Route 2</span>
+          <h3>Highlands & Royal Dornoch</h3>
+          <p>Glencoe • Torridon • Dornoch</p>
+        </div>
+        <div id="route2-map" class="map small"></div>
+        <div class="columns">
+          <div>
+            <h4>Travel legs</h4>
+            <table>
+              <tr><th>Leg</th><th>Approx. drive</th><th>Best stop</th></tr>
+              <tr><td>Giffnock → Glencoe/Ballachulish</td><td>2 hr–2 hr 20</td><td>Loch Lomond / Tyndrum</td></tr>
+              <tr><td>Glencoe → The Torridon</td><td>3 hr 15–3 hr 45</td><td>Fort William / Eilean Donan detour</td></tr>
+              <tr><td>The Torridon → Dornoch</td><td>2 hr 20–2 hr 50</td><td>Inverness / Beauly</td></tr>
+              <tr><td>Dornoch → Giffnock</td><td>4 hr 15–4 hr 50</td><td>Pitlochry or Aviemore</td></tr>
+            </table>
+          </div>
+          <div>
+            <h4>Why choose it</h4>
+            <ul>
+              <li>Best pure scenery: Glencoe, Torridon, beaches and Highland roads.</li>
+              <li>Royal Dornoch is the golf anchor.</li>
+              <li>More driving than the East route, but it feels like a proper Highland road trip.</li>
+              <li>Great dog-friendly beach time in Dornoch.</li>
+            </ul>
+          </div>
+        </div>
+      </article>
+
+      <article class="route-card route-east">
+        <div class="route-title">
+          <span>Route 3</span>
+          <h3>East Coast, North Berwick & St Andrews</h3>
+          <p>Marine North Berwick or Ducks Inn • Rufflets/Rusacks/Fairmont/Hotel du Vin</p>
+        </div>
+        <div id="route3-map" class="map small"></div>
+        <div class="columns">
+          <div>
+            <h4>Travel legs</h4>
+            <table>
+              <tr><th>Leg</th><th>Approx. drive</th><th>Best stop</th></tr>
+              <tr><td>Giffnock → North Berwick</td><td>1 hr 45–2 hr 10</td><td>Falkirk / Edinburgh bypass</td></tr>
+              <tr><td>North Berwick → Aberlady</td><td>20–30 mins</td><td>Gullane beach</td></tr>
+              <tr><td>North Berwick → St Andrews</td><td>1 hr 50–2 hr 20</td><td>Elie / Anstruther</td></tr>
+              <tr><td>St Andrews → Giffnock</td><td>1 hr 45–2 hr 15</td><td>Falkland / Lomond Hills</td></tr>
+            </table>
+          </div>
+          <div>
+            <h4>Why choose it</h4>
+            <ul>
+              <li>Easiest driving and strongest spa route.</li>
+              <li>North Berwick West Links and St Andrews give iconic golf.</li>
+              <li>Best choice if Emma wants spa time while golf is happening.</li>
+              <li>Lots of dog walks: North Berwick beach, Gullane, West Sands.</li>
+            </ul>
+          </div>
+        </div>
+      </article>
+    </section>
+
+    <section class="section spa" id="spa">
+      <div class="section-head">
+        <p class="eyebrow">Spa options</p>
+        <h2>Best wellness stops</h2>
+      </div>
+      <div class="spa-grid">
+        <article>
+          <h3>Loch Fyne Hotel & Spa</h3>
+          <p><strong>Best on Route 1 for a first-night reset.</strong> Good for pool/thermal time and treatments before heading further west.</p>
+          <p class="tag">Route 1 • Inveraray</p>
+        </article>
+        <article>
+          <h3>The Machrie</h3>
+          <p><strong>Golf-first, relaxed wellness.</strong> Better for a treatment and calm island time than a big destination spa.</p>
+          <p class="tag">Route 1 • Islay</p>
+        </article>
+        <article>
+          <h3>Marine North Berwick</h3>
+          <p><strong>Best spa feel on the East route.</strong> Ideal for a half-day spa, lunch and beach walk combination.</p>
+          <p class="tag">Route 3 • East Lothian</p>
+        </article>
+        <article>
+          <h3>Fairmont St Andrews</h3>
+          <p><strong>Big resort spa choice.</strong> Strongest option if spa, pool and resort comfort matter as much as golf.</p>
+          <p class="tag">Route 3 • St Andrews</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="section-head">
+        <p class="eyebrow">Golf planner</p>
+        <h2>Golf anchors</h2>
+      </div>
+      <div class="cards">
+        <article><h3>Machrihanish</h3><p>Remote, dramatic, classic links. Best paired with The Ugadale and a relaxed Kintyre day.</p></article>
+        <article><h3>The Machrie</h3><p>Golf included with stay in the original itinerary. The simplest golf logistics on Route 1.</p></article>
+        <article><h3>Royal Dornoch</h3><p>The flagship round on Route 2. Book early and build the trip around the tee time.</p></article>
+        <article><h3>North Berwick</h3><p>Iconic, fun and full of character. Great fit for the East Lothian base.</p></article>
+        <article><h3>St Andrews</h3><p>Enter the Old Course ballot, with New/Jubilee as reliable alternatives.</p></article>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="section-head">
+        <p class="eyebrow">Guinness-friendly planning</p>
+        <h2>Dog notes</h2>
+      </div>
+      <div class="cards">
+        <article><h3>Beaches</h3><p>Machrihanish Beach, Dornoch Beach, North Berwick beach, Gullane and West Sands are the obvious walk highlights.</p></article>
+        <article><h3>Hotels</h3><p>Dog rooms are limited. Book direct and confirm where Guinness can go: room, bar, terrace, restaurant and breakfast area.</p></article>
+        <article><h3>Car days</h3><p>Build in water stops and beach/grass breaks. Route 2 has the longest driving days.</p></article>
+      </div>
+    </section>
+
+    <section class="section comparison">
+      <div class="section-head">
+        <p class="eyebrow">Which route wins?</p>
+        <h2>Route comparison</h2>
+      </div>
+      <table>
+        <tr><th>Category</th><th>Route 1 West & Islay</th><th>Route 2 Highlands</th><th>Route 3 East Coast</th></tr>
+        <tr><td>Golf</td><td>★★★★★</td><td>★★★★★</td><td>★★★★★</td></tr>
+        <tr><td>Spa</td><td>★★★★☆</td><td>★★★☆☆</td><td>★★★★★</td></tr>
+        <tr><td>Food</td><td>★★★★★</td><td>★★★★☆</td><td>★★★★☆</td></tr>
+        <tr><td>Scenery</td><td>★★★★★</td><td>★★★★★</td><td>★★★★☆</td></tr>
+        <tr><td>Ease of driving</td><td>★★★☆☆</td><td>★★☆☆☆</td><td>★★★★★</td></tr>
+        <tr><td>Dog friendliness</td><td>★★★★☆</td><td>★★★★☆</td><td>★★★★★</td></tr>
+      </table>
+    </section>
+
+    <section class="section booking">
+      <div>
+        <p class="eyebrow">Booking order</p>
+        <h2>Book the bottlenecks first</h2>
+      </div>
+      <ol>
+        <li>Golf tee times: Royal Dornoch, North Berwick, St Andrews.</li>
+        <li>Route 1 ferry car space: Kennacraig ↔ Islay.</li>
+        <li>Dog rooms: call the hotels direct and confirm dog policy in writing.</li>
+        <li>Spa treatments: book around tee times, especially Marine North Berwick and Fairmont.</li>
+        <li>Dinner reservations: especially small island/coastal restaurants.</li>
+      </ol>
+    </section>
+  </main>
+
+  <footer>
+    <p>Scotland Escape • Planning guide for 31 August – 5 September 2026</p>
+    <p class="smallprint">Drive times are planning estimates and should be checked against live traffic/ferry timetables before booking.</p>
+  </footer>
+
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
