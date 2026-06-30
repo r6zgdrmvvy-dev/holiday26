@@ -216,10 +216,37 @@ footer{
   line-height:1.5;
 }
 .legend span{display:inline-block;width:14px;height:4px;margin-right:8px;vertical-align:middle;border-radius:3px}
+.feature-grid,.price-cards,.check-grid{
+  display:grid;
+  grid-template-columns:repeat(4,1fr);
+  gap:18px;
+}
+.feature-grid article,.price-cards article,.calculator-card,.check-grid label{
+  background:white;
+  border:1px solid rgba(22,35,31,.1);
+  border-radius:24px;
+  box-shadow:0 18px 50px rgba(22,35,31,.08);
+  padding:22px;
+}
+.price-cards article span{
+  color:var(--gold);
+  text-transform:uppercase;
+  letter-spacing:.12em;
+  font-weight:900;
+  font-size:.78rem;
+}
+.price-cards article strong{display:block;font-size:1.25rem;margin:.5rem 0;color:var(--green)}
+.check-grid{grid-template-columns:repeat(2,1fr)}
+.check-grid label{font-weight:800;display:flex;gap:10px;align-items:center}
+.calculator-card{display:grid;gap:18px;max-width:760px}
+.calculator-card label{display:grid;gap:8px;font-weight:800}
+.calculator-card input[type=range]{width:100%}
+.pin{background:white;border:2px solid var(--gold);border-radius:999px;width:34px;height:34px;display:grid;place-items:center;box-shadow:0 8px 20px rgba(0,0,0,.22)}
 @media(max-width:900px){
   .intro,.columns,.booking{grid-template-columns:1fr}
   .spa-grid,.cards{grid-template-columns:1fr 1fr}
   .map{height:480px}
+  .feature-grid,.price-cards{grid-template-columns:1fr 1fr}.check-grid{grid-template-columns:1fr}
 }
 @media(max-width:560px){
   .spa-grid,.cards{grid-template-columns:1fr}
@@ -228,6 +255,7 @@ footer{
   nav{font-size:.9rem}
   .map{height:420px;border-radius:18px}
   th,td{font-size:.9rem;padding:10px}
+  .feature-grid,.price-cards{grid-template-columns:1fr}
 }
 @media print{
   .hero{min-height:42vh}
